@@ -269,7 +269,7 @@ a:hover:after{
 }
 
 .marquee-inner.to-left{
-  animation: marqueeLeft 20s linear infinite;
+  animation: marqueeLeft 30s linear infinite;
 }
 .marquee-inner.to-right{
   animation: marqueeRight 30s linear infinite;
