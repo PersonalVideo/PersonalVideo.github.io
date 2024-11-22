@@ -13,7 +13,7 @@
 
 <body data-new-gr-c-s-check-loaded="14.1117.0" data-gr-ext-installed="">
 <div class="content">
-  <h1><strong>PersonalVideo: High ID-Fidelity Video Customization <br> with Static Images</strong></h1>
+  <h1><strong>PersonalVideo: High ID-Fidelity Video Customization <br> without Dynamic and Semantic Degradation</strong></h1>
 </div>
 
 <section class="hero">
@@ -141,9 +141,12 @@
 
   <div class="content">
     <h2 style="text-align:center;"><b>Abstract</b></h2>
-    <p>The current text-to-video (T2V) generation has made significant progress in synthesizing realistic general videos, but it is still unexplored in identity-specific human video generation with customized ID images. The key challenge lies in maintaining high ID fidelity consistently while preserving the original motion dynamic and prompt following after the identity injection. 
-      Current video identity customization methods mainly rely on reconstructing given identity images on text-to-image models, which have a divergent distribution with the T2V model. This process introduces a tuning-inference gap, leading to identity inaccuracy and dynamic degradation. 
-      To tackle this problem, we propose a novel framework, dubbed PersonalVideo, that applies direct supervision on videos synthesized by the T2V model to bridge the gap. Specifically, we introduce a learnable Spatial Identity Adapter under the supervision of pixel-space ID loss, which customizes the specific identity and preserves the original T2V model's abilities (e.g., motion dynamic and prompt following). Furthermore, we employ simulated prompt augmentation to reduce overfitting by supervising generated results in more semantic scenarios, gaining good robustness even with only a single reference image available. Extensive experiments demonstrate our method’s superiority in delivering high identity faithfulness while preserving the inherent video generation qualities of the original T2V model, outshining prior approaches. Notably, our PersonalVideo seamlessly integrates with pre-trained SD components, such as ControlNet and style LoRA, requiring no extra tuning overhead.</p>
+    <p>The current text-to-video (T2V) generation has made significant progress in synthesizing realistic general videos, but it is still under-explored in identity-specific human video generation with customized ID images. The key challenge lies in maintaining high ID fidelity consistently while preserving the original motion dynamic and semantic following after the identity injection. 
+      Current video identity customization methods mainly rely on reconstructing given identity images on text-to-image models, which have a divergent distribution with the T2V model. This process introduces a tuning-inference gap, leading to dynamic and semantic degradation. 
+      To tackle this problem, we propose a novel framework, dubbed PersonalVideo, that applies direct supervision on videos synthesized by the T2V model to bridge the gap. 
+      Specifically, we introduce a learnable Isolated Identity Adapter to customize the specific identity non-intrusively, which does not comprise the original T2V model's abilities (e.g., motion dynamic and semantic following). 
+      With the non-reconstructive identity loss, we further employ simulated prompt augmentation to reduce overfitting by supervising generated results in more semantic scenarios, gaining good robustness even with only a single reference image available.
+      Extensive experiments demonstrate our method's superiority in delivering high identity faithfulness while preserving the inherent video generation qualities of the original T2V model, outshining prior approaches. Notably, our PersonalVideo seamlessly integrates with pre-trained SD components, such as ControlNet and style LoRA, requiring no extra tuning overhead.</p>
   </div>
   
   <div class="content">
